@@ -120,41 +120,36 @@ public class Game {
     public boolean fueRespuestaCorrecta() {
         if (enCasillaCastigo[jugadorActual]){
             if (estaSaliendoDeLaCarcel) {
-                System.out.println("Respuesta correcta!!!!");
-                monederos[jugadorActual]++;
-                System.out.println(jugadores.get(jugadorActual)
-                        + " ahora tiene "
-                        + monederos[jugadorActual]
-                        + " monedas doradas.");
-
-                boolean ganador = jugadorHaGanado();
-                jugadorActual++;
-                if (jugadorActual == jugadores.size()) jugadorActual = 0;
-
+                boolean ganador = haAcertado();
+                siguienteJugador();
                 return ganador;
             } else {
-                jugadorActual++;
-                if (jugadorActual == jugadores.size()) jugadorActual = 0;
-                return true;
+               boolean ganador = haAcertado();
+                siguienteJugador();
+                return ganador;
             }
 
-
-
         } else {
-
-            System.out.println("Respuesta correcta!!!!");
-            monederos[jugadorActual]++;
-            System.out.println(jugadores.get(jugadorActual)
-                    + " ahora tiene "
-                    + monederos[jugadorActual]
-                    + " monedas doradas.");
-
-            boolean ganador = jugadorHaGanado();
-            jugadorActual++;
-            if (jugadorActual == jugadores.size()) jugadorActual = 0;
-
+            boolean ganador = haAcertado();
+            siguienteJugador();
             return ganador;
         }
+    }
+
+    private boolean haAcertado() {
+        System.out.println("Respuesta correcta!!!!");
+        monederos[jugadorActual]++;
+        System.out.println(jugadores.get(jugadorActual)
+                + " ahora tiene "
+                + monederos[jugadorActual]
+                + " monedas doradas.");
+        boolean ganador = jugadorHaGanado();
+        return ganador;
+    }
+
+    private void siguienteJugador() {
+        jugadorActual++;
+        if (jugadorActual == jugadores.size()) jugadorActual = 0;
     }
 
     public boolean respuestaIncorrecta(){
