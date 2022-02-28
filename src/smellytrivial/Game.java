@@ -114,7 +114,7 @@ public class Game {
         if (posiciones[jugadorActual] == 2) return "Deportes";
         if (posiciones[jugadorActual] == 6) return "Deportes";
         if (posiciones[jugadorActual] == 10) return "Deportes";
-        return "Música";
+        else return "Música";
     }
 
     public boolean fueRespuestaCorrecta() {
