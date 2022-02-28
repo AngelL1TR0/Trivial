@@ -31,9 +31,9 @@ public class TrivialTests {
         Assertions.assertEquals(expected, actual);
     }
     @Test
-    public void minimo_Dos_Jugadores() {
+    public void minimo_Dos_Jugadores_Y_Maximo_seis() {
         Game trivial = new Game();
         boolean esJugable = trivial.esJugable();
-        Assertions.assertFalse(esJugable);
+        Assertions.assertTrue(esJugable);
     }
 }

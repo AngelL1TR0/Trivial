@@ -14,13 +14,15 @@ public class GameLauncher {
         Game juego = new Game();
 
         juego.agregar("Maria");
+        juego.agregar("Pablo");
+        juego.agregar("Angel");
 
         Random rand = new Random();
 
         ganador = false;
         boolean esJugable = juego.esJugable();
         if (!esJugable) {
-            System.out.println("Las partidas deben tener 2 jugadores como minimo");
+            System.out.println("Las partidas deben tener 2 jugadores como minimo y 6 maximo");
         }
 
 
