@@ -5,7 +5,7 @@ import smellytrivial.Game;
 public class TrivialTests {
     @Test
     public void true_is_true(){
-        Assertions.assertTrue(false);
+        Assertions.assertTrue(true);
     }
 
     @Test
@@ -29,5 +29,11 @@ public class TrivialTests {
 
         //Assert
         Assertions.assertEquals(expected, actual);
+    }
+    @Test
+    public void minimo_Dos_Jugadores() {
+        Game trivial = new Game();
+        boolean esJugable = trivial.esJugable();
+        Assertions.assertFalse(esJugable);
     }
 }

@@ -7,30 +7,32 @@ import java.util.Random;
 
 public class GameLauncher {
 
-    private static boolean noGanador;
+    private static boolean ganador;
+
 
     public static void main(String[] args) {
         Game juego = new Game();
 
         juego.agregar("Maria");
-        juego.agregar("Juan");
-        juego.agregar("Antonio");
 
         Random rand = new Random();
 
-        do {
+        ganador = false;
+        boolean esJugable = juego.esJugable();
+        if (!esJugable) {
+            System.out.println("Las partidas deben tener 2 jugadores como minimo");
+        }
+
+
+        while (juego.esJugable() && !ganador){
 
             juego.tirarDado(rand.nextInt(5) + 1);
 
             if (rand.nextInt(9) == 7) {
-                noGanador = juego.respuestaIncorrecta();
+                ganador = juego.respuestaIncorrecta();
             } else {
-                noGanador = juego.fueRespuestaCorrecta();
+                ganador = juego.fueRespuestaCorrecta();
             }
-
-
-
-        } while (noGanador);
-
+        }
     }
 }
