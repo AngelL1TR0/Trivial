@@ -29,3 +29,5 @@ Editamos el metodo tirarDado en game.java los errores como llamar a un metodo de
 ##Problema4
 
 No hace falta hacer nada, ya que en el ejercicio 1 lo he editado por que no me cuadraba el "noGanador", el cambio se basa en cambiar el nombre de los metodos despues en el while que cree tambien. 
+Posteriormente me he dado cuenta que en el metodo jugadorHaGanado habia un signo de exclamacion que evitaba que un jugador ganaba cuando tenia 6 monedas.
+Y en el metodo respuestaIncorrecta devolvia true, cuando debia devolver false para dejar que un jugador salga de la casilla de castigo. 

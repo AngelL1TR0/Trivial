@@ -164,11 +164,11 @@ public class Game {
 
         jugadorActual++;
         if (jugadorActual == jugadores.size()) jugadorActual = 0;
-        return true;
+        return false;
     }
 
 
     private boolean jugadorHaGanado() {
-        return !(monederos[jugadorActual] == 6);
+        return (monederos[jugadorActual] == 6);
     }
 }
