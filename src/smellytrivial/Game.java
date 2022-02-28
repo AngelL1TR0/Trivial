@@ -58,15 +58,17 @@ public class Game {
         if (enCasillaCastigo[jugadorActual]) {
             if (puntosDado % 2 != 0) {
                 estaSaliendoDeLaCarcel = true;
+                enCasillaCastigo[jugadorActual] = false;
 
                 System.out.println(jugadores.get(jugadorActual) + " sale de la casilla de castigo");
                 posiciones[jugadorActual] = posiciones[jugadorActual] + puntosDado;
                 if (posiciones[jugadorActual] > 11) posiciones[jugadorActual] = posiciones[jugadorActual] - 12;
 
-                System.out.println(nuevaPosicionJugador());
+                nuevaPosicionJugador();
                 System.out.println("La categoría es " + categoriaActual());
                 hacerPregunta();
-            } else {
+            }
+            else {
                 System.out.println(jugadores.get(jugadorActual) + " no sale de la casilla de castigo");
                 estaSaliendoDeLaCarcel = false;
             }
@@ -76,7 +78,7 @@ public class Game {
             posiciones[jugadorActual] = posiciones[jugadorActual] + puntosDado;
             if (posiciones[jugadorActual] > 11) posiciones[jugadorActual] = posiciones[jugadorActual] - 12;
 
-            System.out.println(nuevaPosicionJugador());
+            nuevaPosicionJugador();
             System.out.println("La categoría es " + categoriaActual());
             hacerPregunta();
         }
