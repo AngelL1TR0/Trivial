@@ -38,3 +38,8 @@ En el metodo categoriaActual de Game.java he añadido un else antes de "Musica" 
 
 Creacion mediante refractores de los metodos: siguienteJugador y haAcertado, para hacer el metodo fueRespuestaCorrecta menos repetitivo.
 Tambien he cambiado un return true a return ganador, que encaja mejor, al cambiar el retunr en el metodo el programa de varias pruebas de momento no ha fallado y siempre acaba la partida.
+
+***
+##Problema6
+
+El metodo fueRespuestCorrecta ya esta del todo simplificado con el metodo hecho en el ejercicio 5, en este paso solo he puesto un metodo siguienteJugador en el metodo respuestaIncorrecta.

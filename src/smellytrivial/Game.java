@@ -157,8 +157,7 @@ public class Game {
         System.out.println(jugadores.get(jugadorActual)+ " va a la casilla de castigo");
         enCasillaCastigo[jugadorActual] = true;
 
-        jugadorActual++;
-        if (jugadorActual == jugadores.size()) jugadorActual = 0;
+       siguienteJugador();
         return false;
     }
 
