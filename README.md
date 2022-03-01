@@ -43,3 +43,8 @@ Tambien he cambiado un return true a return ganador, que encaja mejor, al cambia
 ##Problema6
 
 El metodo fueRespuestCorrecta ya esta del todo simplificado con el metodo hecho en el ejercicio 5, en este paso solo he puesto un metodo siguienteJugador en el metodo respuestaIncorrecta.
+
+***
+##Problema7
+
+Para que no nos quedemos sin preguntas he cambiado los if del metodo categoriaActual, haciendo que cada pregunta tenga ilimitadas preguntas hasta que alguien gane.

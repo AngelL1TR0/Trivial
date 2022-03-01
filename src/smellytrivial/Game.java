@@ -105,16 +105,11 @@ public class Game {
 
 
     private String categoriaActual() {
-        if (posiciones[jugadorActual] == 0) return "Cultura popular";
-        if (posiciones[jugadorActual] == 4) return "Cultura popular";
-        if (posiciones[jugadorActual] == 8) return "Cultura popular";
-        if (posiciones[jugadorActual] == 1) return "Ciencias";
-        if (posiciones[jugadorActual] == 5) return "Ciencias";
-        if (posiciones[jugadorActual] == 9) return "Ciencias";
-        if (posiciones[jugadorActual] == 2) return "Deportes";
-        if (posiciones[jugadorActual] == 6) return "Deportes";
-        if (posiciones[jugadorActual] == 10) return "Deportes";
+        if (posiciones[jugadorActual] == 0 || posiciones[jugadorActual] % 4 == 0) return "Cultura popular";
+        if (posiciones[jugadorActual] == 1 || posiciones[jugadorActual] % 3 == 0) return "Ciencias";
+        if (posiciones[jugadorActual] == 2 || posiciones[jugadorActual] % 5  == 0) return "Deportes";
         else return "Música";
+
     }
 
     public boolean fueRespuestaCorrecta() {
